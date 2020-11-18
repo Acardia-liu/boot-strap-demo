@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试API</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle"
+        type="button" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li role="presentation">
+                <!--tabIndex属性可以设置键盘中的TAB键在控件中的移动顺序，即焦点的顺序，
+                若把tabIndex属性设为一个负值（如tabIndex="-1"），那么这个链接将被排除在TAB键的序列之外。-->
+                <a href="#" role="menuitem" tabindex="-1">
+                    hello
+                </a>
+                <a href="#" role="menuitem" tabindex="-1">
+                    hello
+                </a>
+                <a href="#" role="menuitem" tabindex="-1">
+                    hello
+                </a>
+                <a href="#" role="menuitem" tabindex="-1">
+                    hello
+                </a>
+                <a href="#" role="menuitem" tabindex="-1">
+                    hello
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!--关闭API-->
+<!--    <script>-->
+<!--        $(document).off(".dropdown.data-api");-->
+<!--    </script>-->
+</body>
+</html>

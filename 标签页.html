@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签页</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            <li><a href="#profile" data-toggle="tab">Profile</a></li>
+            <li class="dropdown">
+                <!--dropdown-toggle下拉菜单-->
+                <a href="#" id="myTabdrop1" class="dropdown-toggle" data-toggle="dropdown">
+                    下拉菜单
+                <b class="caret"></b>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#dropone" tabindex="-1" data-toggle="tab">one</a></li>
+                    <li><a href="#droptwo" tabindex="-1" data-toggle="tab">two</a></li>
+                </ul></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="MyTabContent">
+            <!--fade in active第一个添加淡入淡出效果，后面的加上fade即可-->
+            <div class="tab-pane fade in active" id="home">
+                <p>Home   Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+            </div>
+            <div class="tab-pane fade" id="profile">
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+            </div>
+
+            <div class="tab-pane fade" id="dropone">
+                <p>one  Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+            </div>
+            <div class="tab-pane fade" id="droptwo">
+                <p>two Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+                <p>Hello,欢迎来到毛大Hello,欢迎来到毛大Hello,欢迎来到毛大</p>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $("#myTab a:last").tab("show");
+        /*从0开始计数，指定默认显示为第二个*/
+        $("#myTab li:eq(1)").tab("show");
+        $("a[data-toggle='tab']").on("show.bs.tab",function (e) {
+            alert("切换了")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>警告框</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!--role作用：增强其可访问性-->
+        <div class="alert alert-success" role="alert">
+            Hello World!
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Hello World!
+        </div>
+        <div class="alert alert-info" role="alert">
+            Hello World!
+        </div>
+        <div class="alert alert-danger" role="alert">
+            Hello World!
+        </div>
+        <div class="alert alert-warning " role="alert">
+            <!--data-dismiss="alert"需要添加并且和按钮绑定，
+            使其为一个可操作、可关闭的状态-->
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-disabled="true">&times;</span>
+            </button>
+            <strong> 欢迎来到毛大</strong>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            不知道,请问:
+            <a href="http://www.baidu.com" class="alert-link">
+                度娘
+            </a>
+        </div>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮(1.点击按钮，三秒后复原)</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" data-loading-text="Loading for 3 seconds"
+                class="btn btn-primary js-loading-btn">
+            Loading status</button>
+        <!--autocomplete="off"点击两次转换不同状态-->
+        <button type="button" class="btn btn-default" data-toggle="button"
+                autocomplete="off">
+            Hello
+        </button>
+        <!--多选按钮，双击可取消选择-->
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="checkbox" autocomplete="off" checked>选择1
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off" checked>选择2
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" autocomplete="off" checked>选择3
+            </label>
+        </div>
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <!--设置选择方式为单选radio；多选为Checkbox-->
+                <input type="radio" name="options" autocomplete="off" checked>单选1
+            </label>
+            <label class="btn btn-primary active">
+                <!--设置选择方式为单选radio；多选为Checkbox-->
+                <input type="radio" name="options" autocomplete="off" >单选2
+            </label>
+            <label class="btn btn-primary active">
+                <!--设置选择方式为单选radio；多选为Checkbox-->
+                <input type="radio" name="options" autocomplete="off" >单选3
+            </label>
+            <label class="btn btn-primary active">
+                <!--设置选择方式为单选radio；多选为Checkbox-->
+                <input type="radio" name="options" autocomplete="off" >单选4
+            </label>
+        </div>
+        <!--data-complete-text="finish"需要改变的文字内容-->
+        <button type="button" data-complete-text="finish"
+                class="btn btn-default myBtn" autocomplete="off">
+            Hello
+        </button>
+    </div>
+
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $(".js-loading-btn").on("click",function (e) {
+            let btn =$(this).button("loading");
+            setTimeout(function (e) {
+                btn.button("reset")
+            },3000)
+        });
+        $(".myBtn").on("click",function (e) {
+            $(this).button("complete");
+        })
+    </script>
+</body>
+</html>

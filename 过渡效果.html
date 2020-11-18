@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡效果</title>
+<!--    <link rel="stylesheet" href="bootstrap.min.css">-->
+    <style>
+        #myDiv{
+            width:100px;
+            height: 100px;
+            background-color: red;
+            /*支持当前浏览器*/
+            -webkit-transition: width 2s;
+            transition: width 2s;
+        }
+        #myDiv:hover{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+
+    </div>
+    <script>
+        // transitionend过渡效果完成时触发
+        document.getElementById("myDiv").addEventListener("transitionend",function (e) {
+            this.innerHTML = "过渡事件触发--过渡已完成"
+        })
+    </script>
+</body>
+</html>

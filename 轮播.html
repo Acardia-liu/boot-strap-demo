@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <!--字体图标的引用(有效)-->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--图片是充满全屏的，改变容器大小-->
+    <style>
+        #myCarousel{
+            width: 500px;
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="myCarousel">
+        <!--data-interval="2000"设置滚动时间为2秒，前提是必须先鼠标点击-->
+       <!--可使用js代码执行-->
+        <div id="carousel-example-generic" class="carousel slide" data-interval="2000">
+        <!--无序列表ol-->
+            <ol class="carousel-indicators">
+                <!--li承载轮播图的小点-->
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            </ol>
+            <!--carousel承载的具体内容-->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="1.jpg" alt="">
+                    <!--图片上添加文字-->
+                    <div class="carousel-caption">
+                        <h3>111</h3>
+                        <p>11111</p>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="2.jpg" alt="">
+                    <!--图片上添加文字-->
+                    <div class="carousel-caption">
+                        <h3>222</h3>
+                        <p>22222</p>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="3.jpg" alt="">
+                    <!--图片上添加文字-->
+                    <div class="carousel-caption">
+                        <h3>333</h3>
+                        <p>33333</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 属性 data-slide接受关键字 prev 或 next，用来改变幻灯片相对于当前位置的位置。
+            使用 data-slide-to 来向轮播传递一个原始滑动索引，data-slide-to="2"将把滑块移动到一个特定的索引，索引从 0开始计数。
+            data-ride="carousel" 属性用于标记轮播在页面加载时就开始动画播放-->
+            <a href="#carousel-example-generic" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel-example-generic" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        /*不需要点击鼠标，让轮播图自行滚动*/
+        $(".carousel").carousel({
+            interval:2000
+        })
+    </script>
+</body>
+</html>

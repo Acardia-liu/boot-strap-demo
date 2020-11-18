@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!--使用role避免错误的发生-->
+        <!--nav-stacked垂直展示-->
+        <!--nav-justified铺满全屏且两端对齐-->
+        <ul id="mytab" class="nav nav-pills nav-justified" role="tablist">
+            <!--active是选中的-->
+            <li role="presentation" class="active">
+                <a href="">home</a>
+            </li>
+            <li role="presentation">
+                <a href="">hello</a>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                    world
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation">
+                        <a href="" role="menuitem" tabindex="-1">hello1</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem" tabindex="-1">hello2</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem" tabindex="-1">hello3</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="" role="menuitem" tabindex="-1">hello4</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $("#mytab a").click(function (e) {
+            e.preventDefault();
+            $(this).tab("show");
+        })
+    </script>
+</body>
+</html>

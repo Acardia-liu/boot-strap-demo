@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工具提示（鼠标掠过时，有标签提示）</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <p class="text-muted" style="margin-bottom: 0">
+            <!--data-placement指定提示标签所展示的位置-->
+            <!--title属性不传值，会显示网址-->
+            <!--data-animation为动画的显示-->
+            欢迎光临 <a id="mytooltip" href="#" data-toggle="tooltip" title="" data-placement="left" data-original-title="www.baidu.com" data-animation="false">毛大</a> ，进门五万块，没钱请出去
+        </p>
+    </div>
+
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+    /*初始化tooltip*/
+    $("[data-toggle='tooltip']").tooltip();
+    /*tooltip在页面出现时执行*/
+    // $("#mytooltip").tooltip("show")
+    /*tooltip消失时，触发事件*/
+    $("#mytooltip").on("hidden.bs.tooltip",function (e) {
+        alert("hello")
+    })
+</script>
+</body>
+</html>

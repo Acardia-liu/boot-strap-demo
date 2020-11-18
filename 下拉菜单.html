@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!--poll-right按钮向右对齐，且内容不遮挡按钮，若在button上加，按钮会被内容遮挡-->
+        <div class="dropdown pull-right">
+            <!--多次点击不同状态dropdown-toggle-->
+            <button class="btn btn-default dropdown-toggle " type="button" data-toggle="dropdown">
+                下拉菜单
+                <!--caret表示向下小箭头的图标-->
+                <span class="caret"></span>
+            </button>
+            <!--dropdown-menu-right内容向右-->
+            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation" class="dropdown-header">大写一到四</li>
+                <!--role表示按钮的item-->
+                <li> <a href="#" role="menuitem">一</a></li>
+                <li> <a href="#" role="menuitem">二</a></li>
+                <li> <a href="#" role="menuitem">三</a></li>
+                <li> <a href="#" role="menuitem">四</a></li>
+                <!--divider表示分割线，用来分隔内容-->
+                <li role="presentation" class="divider">小写1到4</li>
+                <!--dropdown-header表示下拉菜单的标题头-->
+                <li role="presentation" class="dropdown-header">小写1到4</li>
+
+
+                <li> <a href="#" role="menuitem">1</a></li>
+                <li> <a href="#" role="menuitem">2</a></li>
+                <!--disabled表示禁用某项-->
+                <li class="disabled"> <a href="#" role="menuitem">3</a></li>
+                <li> <a href="#" role="menuitem">4</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+</body>
+</html>

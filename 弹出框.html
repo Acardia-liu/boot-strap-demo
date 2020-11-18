@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击触发弹出框(依赖于工具提示插件tooltip（必须手动初始化（鼠标掠过时触发））)</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <!--若不指定，默认在右边显示，data-placement指定显示区域-->
+        <!--data-trigger="focus"点击空白处，弹出框消失-->
+        <!--data-animation="false"关闭动画效果-->
+        <button type="button" class="btn btn-default js-popover" data-placement="bottom"
+                data-toggle="popover" title="标题" data-content="这里是内容区域"
+        data-trigger="focus" data-animation="false">弹出框</button>
+    </div>
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+        $(".js-popover").popover();
+        /*与页面一同显示*/
+        $(".js-popover").popover("show");
+        /*弹出框消失后触发*/
+        $(".js-popover").on("hidden.bs.popover",function (e) {
+            alert("hello")
+        })
+
+</script>
+</body>
+</html>
